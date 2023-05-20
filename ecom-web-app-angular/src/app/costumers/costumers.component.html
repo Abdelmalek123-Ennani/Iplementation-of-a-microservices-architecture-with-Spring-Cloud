@@ -1,0 +1,23 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>name</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let costumer of costumers._embedded.costumers">
+                <td>{{costumer.id}}</td>
+                <td>{{costumer.name}}</td>
+                <td>{{costumer.email}}</td>
+                <td>
+                    <button class="btn btn-success"
+                    (click)="getBills(costumer)"
+                    >Orders</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

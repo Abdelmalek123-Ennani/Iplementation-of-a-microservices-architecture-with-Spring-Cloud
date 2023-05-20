@@ -1,0 +1,29 @@
+<div class="container">
+    <p>
+        bills Id : <b>{{bills[0].id}}</b>
+    </p>
+    <p>
+        bills date : <b>{{bills[0].billingDate}}</b>
+    </p>
+    <p>
+        Costumer name : <b>{{bills[0].costumer.name}}</b>
+    </p>
+    <table class="table" *ngIf="bills">
+      <thead>
+        <tr>
+            <th>Id</th>
+            <th>productName</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of bills[0].productItems">
+            <td>{{product.id}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.price}}</td
+        </tr>
+      </tbody>
+    </table>
+</div>
